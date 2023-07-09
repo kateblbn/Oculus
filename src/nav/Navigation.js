@@ -14,15 +14,20 @@ const NavigUl = styled(Navig)`
   width: 250px;
   display: flex;
   justify-content: space-between;
+    @media(max-width: 800px) {
+      display: none;
+    }
 `;
 
 const NavImgLogo = styled.img`
-display: flex;
-margin: 0 476px 0 214px;
-justify-content: center;
+position: fixed;
+right: 60%;
+left: 40%;
+
 `
 const NavImgBuy = styled.img`
-display: flex;
+right: 0;
+position: absolute;
 width: 25px;
 height: 25px;
 `
@@ -32,18 +37,21 @@ color: black;
   color: rgb(135, 75, 75);
   text-decoration: double;
   transition: 0.5s all;
-
 }
 `
 
 const Hamburger = styled.div`
+display: none;
 position: relative;
-z-index: 2;
+z-index: 20;
 width: 30px;
 height: 30px;
-top: 10px;
+top: 10px ;
 left: 10px;
 transition: 0.5s all;
+  @media  (max-width: 800px) {
+    display: block;
+  }
 `
 const Span = styled.span`
 margin-bottom: 5px;
@@ -53,6 +61,19 @@ height: 2px;
 background-color: black;
 transition: all 0.5s;
 cursor: pointer;
+    &:nth-child(1) {
+      transform: ${({open}) => ((open) ?  'rotate(45deg)' : 'rotate(0)')}
+    }
+    &:nth-child(2) {
+      opacity: ${({ open }) => (open ? "0" : "1")};
+      transform: ${({ open }) => 
+        (open ? "translateX(20px)":"translateX(0)")};
+    }
+    &:nth-child(3) {
+      transform: ${({ open }) =>
+        (open ? "rotate(-45deg)" : "rotate(0)")};
+  
+  }
 `
 const HambUlFlex = styled(NavigUl)`
 display: flex;
@@ -81,17 +102,15 @@ function Navigation() {
     return (
         <Navig>
           <Hamburger onClick={changeClass}>
-            <div>
             <Span onClick={() => close()}></Span>
             <Span onClick={() => close()}></Span>
             <Span onClick={() => close()}></Span>
-            </div>
           </Hamburger>
           <Menu className={activeHumb}>
             <HambUlFlex>
               <Li><NavA href="/" className="nav__item">SHOP</NavA></Li>
               <Li><NavA href="/" className="nav__item">GAMES</NavA></Li>
-              <li><NavA href="/" className="nav__item">METAVERSE</NavA></li>
+              <Li><NavA href="/" className="nav__item">METAVERSE</NavA></Li>
             </HambUlFlex>
           </Menu>
 

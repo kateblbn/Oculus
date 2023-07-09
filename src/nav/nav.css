@@ -8,6 +8,12 @@
     min-height: 100vh;
     transition: 0.5s all;
   } 
+.rotate {
+ transform: rotate(45deg);
+  top: 0;
+  right: 0;
+
+}
 .noActive {
   left: -100%;
   visibility: hidden;

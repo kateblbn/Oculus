@@ -23,7 +23,6 @@ display: flex;
 margin-bottom: 20px;
 `
 const ProductDiv = styled.div`
-margin-top: 1019px;
 padding: 100px 0;
 `
 

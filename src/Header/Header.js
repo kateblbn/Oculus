@@ -81,7 +81,6 @@ padding-left: 340px;
 export const Header = () => {
 return (
     <div          style={{backgroundImage: ` url(${back}) `,
-                    position: 'absolute',
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     width: '100%',
