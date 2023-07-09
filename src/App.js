@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Accessories from "./Accessories/Accessories";
+import Box from "./Box/Box";
+import Buy from "./Buy/Buy";
+import Games from "./Games/Games";
+import { Header } from "./Header/Header";
+import Metaverse from "./Metaverse/Metaverse";
+import Product from "./Product/Product";
+import Subscr from "./Subscr/Subscr";
+import Navigation from "./nav/Navigation";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Navigation/>
+      <Header/>
+      <Product/>
+      <Games/>
+      <Buy/>
+      <Box/>
+      <Metaverse/>
+      <Accessories/>
+      <Subscr/>
     </div>
   );
 }
