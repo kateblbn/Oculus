@@ -20,7 +20,7 @@ const NavigUl = styled(Navig)`
 `;
 
 const NavImgLogo = styled.img`
-position: fixed;
+position: absolute;
 right: 60%;
 left: 40%;
 
@@ -49,6 +49,20 @@ height: 30px;
 top: 10px ;
 left: 10px;
 transition: 0.5s all;
+.first {
+  display: none;
+}
+.rotate {
+  transform: rotate(45deg);
+  position: absolute;
+  transition: 0.5s all;
+
+}
+.rotateLeft {
+  transform: rotate(-45deg);
+  transition: 0.5s all;
+
+}
   @media  (max-width: 800px) {
     display: block;
   }
@@ -61,19 +75,6 @@ height: 2px;
 background-color: black;
 transition: all 0.5s;
 cursor: pointer;
-    &:nth-child(1) {
-      transform: ${({open}) => ((open) ?  'rotate(45deg)' : 'rotate(0)')}
-    }
-    &:nth-child(2) {
-      opacity: ${({ open }) => (open ? "0" : "1")};
-      transform: ${({ open }) => 
-        (open ? "translateX(20px)":"translateX(0)")};
-    }
-    &:nth-child(3) {
-      transform: ${({ open }) =>
-        (open ? "rotate(-45deg)" : "rotate(0)")};
-  
-  }
 `
 const HambUlFlex = styled(NavigUl)`
 display: flex;
@@ -94,17 +95,25 @@ margin-bottom: 15px;
 
 function Navigation() {
   const [open, setOpen] = useState(false)
+  const [hidden, sethidden] = useState(false)
+  const [rotateR, setRotateR] = useState(false) 
+  const [rotateL, setRotateL] = useState(false)
   function changeClass() {
     setOpen(!open)
+    sethidden(!hidden)
+    setRotateR(!rotateR)
+    setRotateL(!rotateL)
   }
-  const close = () => setOpen(false);
+  const rotateLeft = (rotateL)? 'rotateLeft' : '';
+  const rotateRight = (rotateR)? 'rotate' : ''
+  const hidenSpan = (hidden)? 'first' : ''
   const activeHumb = (open)? 'active' : 'noActive'; //!!!!!!!!!!!!!!!
     return (
         <Navig>
           <Hamburger onClick={changeClass}>
-            <Span onClick={() => close()}></Span>
-            <Span onClick={() => close()}></Span>
-            <Span onClick={() => close()}></Span>
+            <Span className={rotateRight}></Span>
+            <Span className={hidenSpan}></Span>
+            <Span className={rotateLeft}></Span>
           </Hamburger>
           <Menu className={activeHumb}>
             <HambUlFlex>

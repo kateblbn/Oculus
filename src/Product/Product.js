@@ -1,5 +1,11 @@
 import easy from "../img/easy.jpg";
 import styled from 'styled-components'
+
+
+const ProductDiv = styled.div`
+padding: 100px 0;
+margin-top: 1000px;
+`
 const Title = styled.div`
 width: 329px;
 font-size: 36px;
@@ -17,13 +23,62 @@ color: var(--grey, #5C5C5E);
 font-size: 16px;
 font-weight: 400;
 margin-right: 132px;
+
 `
 const FlexTitleSub = styled.div`
 display: flex;
 margin-bottom: 20px;
 `
-const ProductDiv = styled.div`
-padding: 100px 0;
+const ProductItems = styled.div`
+display: grid;
+grid-template-columns: 280px 580px 280px;
+grid-template-rows: 150px 150px;
+gap: 20px;
+`
+const ItemUl = styled.ul`
+    grid-column: 1;
+    grid-row: 1/3;
+    margin-left: 25px;
+    li {
+        list-style-type: decimal-leading-zero;
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: var(--grey, #5C5C5E);
+        &:nth-child(1) {
+            color: black;
+        }
+    }
+`
+const ProductImg = styled.div`
+    grid-column: 2/3;
+    grid-row: 1/3;
+`
+const ProductGrafics = styled.div`
+    display: grid;
+    grid-column: 3;
+    grid-row: 1/3;
+    `
+const GraficDescr = styled.div`
+    grid-column: 1/2;
+    grid-row: 1/2;
+`
+const GraphicName = styled.div`
+    color: var(--grey, #5C5C5E);
+    font-family: Helvetica;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+`
+const GraphicTxt = styled.div`
+    width: 273px;
+    color: var(--grey, #5C5C5E);
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+`
+const GraphicVideo = styled.div`
+    grid-column: 1/2;
+    grid-row: 3/4;
 `
 
 function Product() {
@@ -33,26 +88,28 @@ function Product() {
                 <Subtitle>PRODUCT FEATURES</Subtitle>  
                 <Title>Easy to set up and safe to use</Title>      
             </FlexTitleSub>   
-            <div className="product__items">
-                <ul className="product__item-ul">
+            <ProductItems>
+                <ItemUl>
                     <li className="product__item-li">Graphics</li>
                     <li className="product__item-li">Controls</li>
                     <li className="product__item-li">Processor</li>
                     <li className="product__item-li">Set up your play area</li>
                     <li className="product__item-li">Gardian activity</li>
                     <li className="product__item-li">Headset casting</li>
-                </ul>  
-            <div className="product__image">
+                </ItemUl>  
+            <ProductImg>
                 <img src={easy} alt="easy"/>
-            </div>  
-            <div className="product__graphics">
-                <div className="product__graphics-name">Grafics</div>
-                <div className="product__graphics-descr">With 1832 x 1920 pixels per eye, everything from multiplayer games and productivity apps to 360 0 videos look beyond incredible</div>
-                <div className="product__graphics-video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tyVJ20AzCvs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
-            </div>         
+            </ProductImg>  
+            <ProductGrafics>
+                <GraficDescr>
+                    <GraphicName>Grafics</GraphicName>
+                    <GraphicTxt>With 1832 x 1920 pixels per eye, everything from multiplayer games and productivity apps to 360 0 videos look beyond incredible</GraphicTxt>
+                </GraficDescr>
+                <GraphicVideo>
+                    <iframe width="300" height="150" src="https://www.youtube.com/embed/tyVJ20AzCvs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </GraphicVideo>
+            </ProductGrafics>
+            </ProductItems>         
         </ProductDiv>
     )
 }

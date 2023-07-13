@@ -6,7 +6,6 @@ const HeaderBackgr = styled.div`
 padding: 230px 0 154px 0; 
 
 ` 
-
 const HeaderTitle = styled.div`
 color: var(--grey, #5C5C5E);
 font-size: 96px;
@@ -81,6 +80,7 @@ padding-left: 340px;
 export const Header = () => {
 return (
     <div          style={{backgroundImage: ` url(${back}) `,
+                    position: 'absolute',
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     width: '100%',
