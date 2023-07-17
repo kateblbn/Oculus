@@ -6,6 +6,7 @@ import { Header } from "./Header/Header";
 import Metaverse from "./Metaverse/Metaverse";
 import Product from "./Product/Product";
 import Subscr from "./Subscr/Subscr";
+import Footer from "./footer/Footer";
 import Navigation from "./nav/Navigation";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Metaverse/>
       <Accessories/>
       <Subscr/>
+      <Footer/>
     </div>
   );
 }
