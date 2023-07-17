@@ -46,12 +46,14 @@ height: 60px;
 cursor: pointer;
 border:  1px solid ;
 color: var(--grey, #5C5C5E);
-/* button */
 font-size: 16px;
 font-family: Helvetica;
 font-style: normal;
 font-weight: 700;
-border: 1px solid linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+border: 10px solid;
+border-image-slice: 1;
+border-width: 2px;
+border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 `
 const HeaderBtnsFlex = styled.div`
 display: flex;
@@ -67,15 +69,6 @@ font-weight: 400;
 const DivMargin = styled.div`
 padding-left: 340px;
 `
-// const Overlay = styled.div`
-// position: fixed;
-// width: 100%;
-// height: 100%;
-// top: 0;
-// left: 0;
-// background-color:#FFFFFF;
-// opacity: .75;
-// `
 
 export const Header = () => {
 return (

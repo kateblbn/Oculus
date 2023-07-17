@@ -15,15 +15,11 @@ background: linear-gradient(rgba(188, 16, 216, 1), rgba(80, 0, 250, 1));
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 `
-// const Change = styled(Block)`
-// padding: 30px 0;
-// `
 const Subtitle = styled.div`
 color: var(--grey, #5C5C5E);
 font-size: 16px;
 font-weight: 400;
 margin-right: 132px;
-
 `
 const FlexTitleSub = styled.div`
 display: flex;
