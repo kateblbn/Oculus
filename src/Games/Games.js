@@ -3,6 +3,7 @@ import Button from "../Buttons/Buttons";
 import noman from "../img/games/noman.jpg";
 import one from "../img/games/one.jpg";
 import supernatural from "../img/games/supernatural.jpg";
+import { useState } from "react";
 
 const GamesAll = styled.div`
 margin-bottom: 100px;
@@ -74,14 +75,20 @@ font-size: 14px;
 font-style: normal;
 font-weight: 400;
 `
-const CardLink = styled.div`
+const CardLink = styled.a`
 color: rgba(188, 16, 216, 1);
 position: absolute;
 font-size: 16px;
 bottom: 20px;
+cursor: pointer;
 `
 
 function Games() {
+    const [game, setGame] = useState(0)
+    const gamesStore = () => {
+       const link = ''
+console.log(game);
+    }
     return (
         <GamesAll>
             <Subtitle>GAMES</Subtitle>
@@ -89,26 +96,29 @@ function Games() {
                 <div className="games__info">
                     <Title>It’s all fun and games</Title>
                     <Descr>Discover new adventures, master epic challenges or revisit classic moments in your favourite games and experiences</Descr>
-                    <Btn>See all games</Btn>
+                    <Btn >
+                        <a href='https://www.oculus.com/experiences/quest/'>See all games</a>
+                        
+                        </Btn>
                 </div>
                 <GamesCards>
                     <CardsCard>
                         <img src={noman} alt="noman" className="games__cards-img"/>
                         <CardName>Blade & Sorcery: Nomad</CardName>
                         <CardDescr>Step into a medieval fantasy sandbox that uses phisics to serve up some of the most realistic combat in VR</CardDescr>
-                        <CardLink href="/" className="games__cards-link">see more</CardLink>
+                        <CardLink href="https://www.oculus.com/experiences/quest/2031826350263349/?ranking_trace=0_2031826350263349_QUESTSEARCH_7121ce94-4c87-4e61-b09e-8d6e9564d443" className="games__cards-link">see more</CardLink>
                     </CardsCard>
                     <CardsCard>
                         <img src={one} alt="one" className="games__cards-img"/>
                         <CardName>Population: One</CardName>
                         <CardDescr>Climb anything. Fight everywhere. Experience battle royale only possible in VR</CardDescr>
-                        <CardLink href="/" className="games__cards-link">see more</CardLink>
+                        <CardLink href="https://www.oculus.com/experiences/quest/2564158073609422/?ranking_trace=0_2564158073609422_QUESTSEARCH_654784b1-d387-429c-aeb1-4d952f81792e" className="games__cards-link">see more</CardLink>
                     </CardsCard>
                     <CardsCard>
                         <img src={supernatural} alt="supernatural" className="games__cards-img"/>
                         <CardName>Supernatural</CardName>
                         <CardDescr>Box, Flow, Meditate and Stretch with real coaches in stunning destinations from around the world. Enjoy new workouts every day.</CardDescr>
-                        <CardLink href="/" className="games__cards-link">see more</CardLink>
+                        <CardLink href="https://www.oculus.com/experiences/quest/2562090053828017/?ranking_trace=0_2562090053828017_QUESTSEARCH_810c804d-4fc9-4627-89ec-07dba295c7fb" className="games__cards-link">see more</CardLink>
                     </CardsCard>
 
                 </GamesCards>

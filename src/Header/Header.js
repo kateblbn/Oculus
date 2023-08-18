@@ -1,10 +1,9 @@
 import './css.css'
-import back from "../img/background-1.jpg";
 import styled from "styled-components";
 
 const HeaderBackgr = styled.div`
-padding: 230px 0 154px 0; 
-
+padding: 230px 0 0 0; 
+position: relative;
 ` 
 const HeaderTitle = styled.div`
 color: var(--grey, #5C5C5E);
@@ -67,22 +66,22 @@ font-style: normal;
 font-weight: 400;
 `
 const DivMargin = styled.div`
-padding-left: 340px;
 `
 
 export const Header = () => {
 return (
-    <div          style={{backgroundImage: ` url(${back}) `,
-                    position: 'absolute',
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                    width: '100%',
-                    height: '1000px',
-                    left: '0'
+    <div      className='header__margin'
+    //   style={{backgroundImage: ` url(${back}) `,
+    //                 position: 'absolute',
+    //                 backgroundSize: 'cover',
+    //                 backgroundRepeat: 'no-repeat',
+    //                 width: '100%',
+    //                 height: '1000px',
+    //                 left: '0'
                     
-                }}
+    //             }}
 >
-
+<div  className='header__wrapper' ></div>
         <HeaderBackgr>
             <DivMargin>
             <HeaderTitle>Meta Quest 2</HeaderTitle>
@@ -93,11 +92,8 @@ return (
                 <HeaderBtnRight btn="399,99 USD">399,99 USD</HeaderBtnRight>
             </HeaderBtnsFlex>
             <HeaderBtnDescr>Meta Quest 2 is for ages 13+</HeaderBtnDescr>
-
             </DivMargin>
-
         </HeaderBackgr>
-        {/* <Overlay></Overlay> */}
 
     </div>
 )

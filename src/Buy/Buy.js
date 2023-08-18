@@ -19,6 +19,10 @@ opacity: 0.1;
 background-color: #2AA5A0;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+@media(max-width: 1200px) {
+    width: 1224px;
+
+}
 `
 const Absolute = styled.div`
 z-index: 25;

@@ -3,7 +3,6 @@ import { styled } from 'styled-components'
 import youtube from '../img/icons/youtube.png';
 import facebook from '../img/icons/fb.png';
 import insta from '../img/icons/insta.png';
-import logo from "../img/logo.png";
 
 const Navig = styled.div`
 position: relative;
@@ -19,12 +18,6 @@ const NavigUl = styled(Navig)`
 
 `;
 
-const NavImgLogo = styled.img`
-position: absolute;
-right: 60%;
-left: 40%;
-
-`
 const NavImgBuy = styled.img`
 width: 30px;
 height: 30px;
@@ -54,25 +47,22 @@ function Footer() {
   return (
     <Navig>
         <NavigUl>
-          <li><NavA href="/" className="nav__item">SHOP</NavA></li>
-          <li><NavA href="/" className="nav__item">GAMES</NavA></li>
-          <li><NavA href="/" className="nav__item">METAVERSE</NavA></li>
-          <li><Contact href="/" className="nav__item">CONTACT US</Contact></li>
+          <li><NavA href="https://www.meta.com/no/quest/accessories/" className="nav__item">SHOP</NavA></li>
+          <li><NavA href="https://www.oculus.com/experiences/quest/" className="nav__item">GAMES</NavA></li>
+          <li><NavA href="https://www.meta.com/no/quest/products/quest-2/" className="nav__item">METAVERSE</NavA></li>
+          <li><Contact href="https://developer.oculus.com/support/" className="nav__item">CONTACT US</Contact></li>
         </NavigUl>
-        <NavImgLogo src={logo} alt="logo" className="nav__logo"/>
         <Flex>
-            <a href='/'>
+            <a href='https://www.youtube.com/META'>
             <NavImgBuy src={youtube} alt="youtube" className="youtube"/>
             </a>
-            <a href='/'>
+            <a href='https://www.facebook.com/Meta/?locale=en_EN'>
             <NavImgBuy src={facebook} alt="facebook" className="facebook"/>
             </a>
-            <a href='/'>
+            <a href='https://www.instagram.com/meta/?hl=en'>
             <NavImgBuy src={insta} alt="insta" className="insta"/>
             </a>
         </Flex>
-
-
     </Navig>
   )
 }

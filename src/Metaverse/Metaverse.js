@@ -2,6 +2,9 @@ import { styled } from "styled-components";
 import background from '../img/Metaverse.jpg';
 const MetaContainer = styled.div`
 margin-top: 100px;
+.meta__back {
+    position: relative;
+}
 `
 const MetaText = styled.div`
 width: 109px;
@@ -34,13 +37,15 @@ transform: translateY(375px);
 function Metaverse() {
     return (
         <MetaContainer>
-            <div style={ {backgroundImage:`url(${background})` ,
+            <div className="meta__back" style={ {backgroundImage:`url(${background})` ,
                          width: `100%`,
                          height: `500px` 
                          
             }}>
                 <MetaText>METAVERSE LOADING…</MetaText>
-                <MetaBtn>GO</MetaBtn>
+                <MetaBtn>
+                <a href="https://www.meta.com/no/quest/products/quest-2/">GO</a>
+                </MetaBtn>
             </div>
 
         </MetaContainer>

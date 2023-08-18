@@ -1,4 +1,18 @@
-/* .header {
-    background: url('../img/background-1.jpg')
+.header__wrapper {
+    background: url('../img/background-1.jpg');
+    width: 100%;
+    left: 0;
+    position: absolute;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header__margin {
+    height: 1000px;
+}
+@media (max-width: 1200px) {
+    .header__wrapper {
+        width: 1225px;
 
-} */
+    }
+}

@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 const ProductDiv = styled.div`
 padding: 100px 0;
-margin-top: 1000px;
 `
 const Title = styled.div`
 width: 329px;
@@ -43,6 +42,9 @@ const ItemUl = styled.ul`
         &:nth-child(1) {
             color: black;
         }
+        &:hover {
+            color: violet;
+        }
     }
 `
 const ProductImg = styled.div`
@@ -64,6 +66,10 @@ const GraphicName = styled.div`
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
+    &:hover {
+        color: violet;
+    }
+
 `
 const GraphicTxt = styled.div`
     width: 273px;

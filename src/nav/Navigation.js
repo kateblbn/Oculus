@@ -14,9 +14,6 @@ const NavigUl = styled(Navig)`
   width: 250px;
   display: flex;
   justify-content: space-between;
-    @media(max-width: 800px) {
-      display: none;
-    }
 `;
 
 const NavImgLogo = styled.img`
@@ -41,7 +38,7 @@ color: black;
 `
 
 const Hamburger = styled.div`
-display: none;
+display: block;
 position: relative;
 z-index: 20;
 width: 30px;
@@ -63,9 +60,6 @@ transition: 0.5s all;
   transition: 0.5s all;
 
 }
-  @media  (max-width: 800px) {
-    display: block;
-  }
 `
 const Span = styled.span`
 margin-bottom: 5px;
@@ -117,17 +111,12 @@ function Navigation() {
           </Hamburger>
           <Menu className={activeHumb}>
             <HambUlFlex>
-              <Li><NavA href="/" className="nav__item">SHOP</NavA></Li>
-              <Li><NavA href="/" className="nav__item">GAMES</NavA></Li>
-              <Li><NavA href="/" className="nav__item">METAVERSE</NavA></Li>
+              <Li><NavA href="https://www.meta.com/no/quest/accessories/" className="nav__item">SHOP</NavA></Li>
+              <Li><NavA href="https://www.oculus.com/experiences/quest/" className="nav__item">GAMES</NavA></Li>
+              <Li><NavA href="https://www.meta.com/no/quest/products/quest-2/" className="nav__item">METAVERSE</NavA></Li>
             </HambUlFlex>
           </Menu>
 
-        <NavigUl>
-          <li><NavA href="/" className="nav__item">SHOP</NavA></li>
-          <li><NavA href="/" className="nav__item">GAMES</NavA></li>
-          <li><NavA href="/" className="nav__item">METAVERSE</NavA></li>
-        </NavigUl>
         <NavImgLogo src={logo} alt="logo" className="nav__logo"/>
         <NavImgBuy src={buy} alt="buy" className="nav__buy"/>
         </Navig>
