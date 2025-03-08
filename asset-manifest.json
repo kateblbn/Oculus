@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Oculus/static/css/main.7ef212af.css",
+    "main.js": "/Oculus/static/js/main.4ecbfd0d.js",
+    "static/media/background-1.jpg": "/Oculus/static/media/background-1.cf908e3d36292e3baa3c.jpg",
+    "static/media/easy.jpg": "/Oculus/static/media/easy.95ffa23be3447987f51f.jpg",
+    "static/media/buy-oculus.png": "/Oculus/static/media/buy-oculus.73590b0a9b643abafc46.png",
+    "static/media/Metaverse.jpg": "/Oculus/static/media/Metaverse.cd9722cfd707b30243ec.jpg",
+    "static/media/one.jpg": "/Oculus/static/media/one.aaf2eac9ab7f20a51229.jpg",
+    "static/media/noman.jpg": "/Oculus/static/media/noman.7bbd16c5e3bdbef80d9a.jpg",
+    "static/media/supernatural.jpg": "/Oculus/static/media/supernatural.60a19157f62ade0f2afe.jpg",
+    "static/media/headset.jpg": "/Oculus/static/media/headset.82b0ff64f0b3ee493d1c.jpg",
+    "static/media/cards.jpg": "/Oculus/static/media/cards.7ca3c2d6a9f9837ab771.jpg",
+    "static/media/controlers.jpg": "/Oculus/static/media/controlers.8d33507a2ef6e9a87ac0.jpg",
+    "static/media/cases.jpg": "/Oculus/static/media/cases.d6b61ec4845a21b74654.jpg",
+    "static/media/adapter.jpg": "/Oculus/static/media/adapter.a2701058e7208a69317c.jpg",
+    "static/media/pack.jpg": "/Oculus/static/media/pack.b05ae58d388ac17b11bd.jpg",
+    "static/media/spacer.jpg": "/Oculus/static/media/spacer.7fdde080cd32ac9e1233.jpg",
+    "index.html": "/Oculus/index.html",
+    "main.7ef212af.css.map": "/Oculus/static/css/main.7ef212af.css.map",
+    "main.4ecbfd0d.js.map": "/Oculus/static/js/main.4ecbfd0d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ef212af.css",
+    "static/js/main.4ecbfd0d.js"
+  ]
+}
