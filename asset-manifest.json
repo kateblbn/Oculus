@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Oculus/static/css/main.7ef212af.css",
-    "main.js": "/Oculus/static/js/main.4ecbfd0d.js",
+    "main.js": "/Oculus/static/js/main.a85dcc27.js",
     "static/media/background-1.jpg": "/Oculus/static/media/background-1.cf908e3d36292e3baa3c.jpg",
     "static/media/easy.jpg": "/Oculus/static/media/easy.95ffa23be3447987f51f.jpg",
     "static/media/buy-oculus.png": "/Oculus/static/media/buy-oculus.73590b0a9b643abafc46.png",
@@ -18,10 +18,10 @@
     "static/media/spacer.jpg": "/Oculus/static/media/spacer.7fdde080cd32ac9e1233.jpg",
     "index.html": "/Oculus/index.html",
     "main.7ef212af.css.map": "/Oculus/static/css/main.7ef212af.css.map",
-    "main.4ecbfd0d.js.map": "/Oculus/static/js/main.4ecbfd0d.js.map"
+    "main.a85dcc27.js.map": "/Oculus/static/js/main.a85dcc27.js.map"
   },
   "entrypoints": [
     "static/css/main.7ef212af.css",
-    "static/js/main.4ecbfd0d.js"
+    "static/js/main.a85dcc27.js"
   ]
 }
